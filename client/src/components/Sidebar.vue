@@ -1,19 +1,18 @@
 <template>
-    <div>
-      <input type="checkbox" id="check">
-      <div class="sidebar">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-        </ul>
-		  </div>
+  <div>
+    <input type="checkbox" id="check">
+    <div class="sidebar">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-    
 }
 </script>
 
