@@ -1,42 +1,67 @@
 <template>
-    <div>
-      <section class="banner">
-			  <div class="container">
-				  <div class="banner-left">
-					  <img :src=" data[0].foto ">
-					  <h2>Hai...<br>
-						Saya adalah seorang  {{ data[0].title }} </h2>
-					  <p>Selamat datang di website portfolio saya!</p>
-				  </div>
-			  </div>
-		  </section>
-    </div>
+  <div>
+    <section id="hero" class="banner mask1">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4 mb-3 text-center text-lg-start">
+            <img :src=" biodata.foto " class="img-fluid rounded-3 shadow">
+          </div>
+          <div class="col-12 col-lg-8 py-1 text-center text-lg-start">
+            <h2>Hai...<br>
+            Saya adalah seorang  {{ biodata.title }} </h2>
+            <p>Selamat datang di website portfolio saya!</p>
+            <p class="d-none d-lg-block">{{ biodata.about }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
 export default {
-    props: {
-      data: {
-        type: Array,
-        default: () => []
+  props: {
+    data: {
+      type: Array,
+      default: () => []
+    }
+  },
+  data () {
+    return {
+      biodata: {
+        foto: 'https://via.placeholder.com/300x300?text=My+Photo',
+        title: '.......',
+        about: 'About me .......'
       }
     }
+  },
+  watch: {
+    data: {
+      handler (newValue) {
+        this.biodata.foto = newValue[0].foto
+        this.biodata.title = newValue[0].title
+        this.biodata.about = newValue[0].about
+      }
+    }
+  }
 }
 </script>
 
 <style>
+.mask1 {
+  background-image: url('https://miro.medium.com/max/1838/1*rGiHBnlqf6-koapA2DzUoA.jpeg');
+  background-size:cover;
+  background-blend-mode:darken;
+  background-repeat:no-repeat;
+  background-color:rgb(8, 27, 122);
+}
 .banner {
-  background-color: #08bdf7;
+  /* background: rgb(45,78,238);
+  background: linear-gradient(90deg, rgba(45,78,238,1) 0%, rgba(81,107,235,1) 79%, rgba(10,45,217,1) 100%); */
   padding: 150px 0;
 }
 section {
   padding: 50px 0;
-}
-.banner img {
-  width: 100px;
-  border-radius: 10px;
-  box-shadow: 0 3px 5px #ddd;
-  margin-bottom: 10px;
 }
 .banner h2,
 .banner p,
