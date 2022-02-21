@@ -14,13 +14,18 @@ class BiodataController {
 
   static postBiodata (req,res) {
     BiodataModel.create({
+      nickname: req.body.nickname,
       nama: req.body.nama,
+      tanggal_lahir: req.body.tanggal_lahir,
       umur: req.body.umur,
       email: req.body.email,
       phone: req.body.phone,
       about: req.body.about,
       title: req.body.title,
-      foto: req.body.foto
+      foto: req.body.foto,
+      linkedin: req.body.linkedin,
+      github: req.body.github,
+      gitlab: req.body.gitlab
     })
     .then(data => {
       res.status(200).send(data)
@@ -32,13 +37,18 @@ class BiodataController {
 
   static putBiodata (req,res) {
     BiodataModel.updateOne({_id : req.params.id}, {$set: {
+      nickname: req.body.nickname,
       nama: req.body.nama,
+      tanggal_lahir: req.body.tanggal_lahir,
       umur: req.body.umur,
       email: req.body.email,
       phone: req.body.phone,
       about: req.body.about,
       title: req.body.title,
-      foto: req.body.foto}
+      foto: req.body.foto,
+      linkedin: req.body.linkedin,
+      github: req.body.github,
+      gitlab: req.body.gitlab}
     })
     .then(data => {
       res.status(200).send(data)

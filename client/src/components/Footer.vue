@@ -4,9 +4,9 @@
       <div class="container d-lg-flex justify-content-between align-items-center py-3">
         <small>Copyright &copy; 2022 - Indra Komara Jayadi</small>
         <div class="py-2 pt-lg-0">
-          <a :href="instagram" title="Instagram"><font-awesome-icon :icon="[ 'fab', 'instagram' ]" size="lg" class="text-white me-lg-3 me-5"/></a>
-          <a :href="linkedin" title="LinkedIn"></a><font-awesome-icon :icon="[ 'fab', 'linkedin' ]" size="lg" class="text-white me-lg-3 me-5"/></a>
-          <a :href="twitter" title="Twitter"></a><font-awesome-icon :icon="[ 'fab', 'twitter' ]" size="lg" class="text-white"/></a>
+          <a target="_blank" :href="linkedin" title="LinkedIn"><font-awesome-icon :icon="[ 'fab', 'linkedin' ]" size="lg" class="text-white me-lg-3 me-5"/></a>
+          <a target="_blank" :href="github" title="Github"><font-awesome-icon :icon="[ 'fab', 'github' ]" size="lg" class="text-white me-lg-3 me-5"/></a>
+          <a target="_blank" :href="gitlab" title="Gitlab"><font-awesome-icon :icon="[ 'fab', 'gitlab' ]" size="lg" class="text-white"/></a>
         </div>
       </div>
     </footer>
@@ -23,17 +23,17 @@ export default{
   },
   data () {
     return {
-      instagram: '',
       linkedin: '',
-      twitter: ''
+      github: '',
+      gitlab: ''
     }
   },
   watch: {
     data: {
       handler (newValue) {
-        this.instagrama = newValue[0].sosmed.instagram
-        this.twitter = newValue[0].sosmed.twitter
-        this.linkedin = newValue[0].sosmed.linkedin
+        this.linkedin = newValue[0].linkedin
+        this.github = newValue[0].github
+        this.gitlab = newValue[0].gitlab
       }
     }
   }

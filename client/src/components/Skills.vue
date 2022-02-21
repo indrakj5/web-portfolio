@@ -41,8 +41,8 @@ export default {
   methods: {
     async getAPIskill () {
       try {
-        // const url = 'api/skill'
-        const url = "https://b9ddd73e-8d3d-44b2-ae48-99602321179c.mock.pstmn.io/skill";
+        const url = 'api/skill'
+        // const url = "https://b9ddd73e-8d3d-44b2-ae48-99602321179c.mock.pstmn.io/skill";
         let response = await axios.get(url)
         this.skills = response.data
       } catch (err) {

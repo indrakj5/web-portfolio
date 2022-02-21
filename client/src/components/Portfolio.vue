@@ -38,8 +38,8 @@ export default {
   methods: {
     async getAPIportfolio () {
       try {
-        // const url = 'api/portfolio'
-        const url = 'https://b9ddd73e-8d3d-44b2-ae48-99602321179c.mock.pstmn.io/portfolio'
+        const url = 'api/portfolio'
+        // const url = 'https://b9ddd73e-8d3d-44b2-ae48-99602321179c.mock.pstmn.io/portfolio'
         let response = await axios.get(url)
         this.portfolios = response.data
       } catch (err) {

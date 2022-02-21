@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
+  faGitlab,
   faInstagram,
   faLinkedin,
   faTwitter
@@ -20,6 +21,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 library.add([
   faBars,
   faGithub,
+  faGitlab,
   faInstagram,
   faLinkedin,
   faTwitter,

@@ -81,7 +81,7 @@ export default {
         this.biodata.email = newValue[0].email
         this.biodata.phone = newValue[0].phone
         this.biodata.about = newValue[0].about
-        this.myAge(newValue[0].tgl_lahir)
+        this.myAge(newValue[0].tanggal_lahir)
       }
     }
   }
